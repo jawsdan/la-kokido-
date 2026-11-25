@@ -1,232 +1,253 @@
 <!doctype html>
-<html lang="en">
+<html lang="no">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Kokido Fried Chicken | Find a restaurant or become an operator</title>
-<meta name="description" content="La Kokido Fried Chicken – natural, pressure-fried chicken. Find your nearest La Kokido in Norway and Morocco, or add La Kokido to your restaurant and become an operator.">
+<title>La Kokido Fried Chicken | Finn restaurant eller bli operatør</title>
+<meta name="description" content="La Kokido Fried Chicken – naturlig, trykkfritert kylling. Finn din nærmeste La Kokido, eller ta La Kokido inn i restauranten din og bli operatør.">
 <meta property="og:title" content="La Kokido Fried Chicken">
-<meta property="og:description" content="Natural, pressure-fried chicken. Find a restaurant or become an operator.">
+<meta property="og:description" content="Naturlig, trykkfritert kylling. Finn restaurant eller bli operatør.">
 <meta property="og:image" content="assets/img/hero.webp">
-<meta name="theme-color" content="#1e1410">
+<meta name="theme-color" content="#111111">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/luckiest-guy.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/hero.webp" as="image">
+<link rel="preload" href="assets/fonts/bowlby-one.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skip">Hopp til innhold</a>
 
-<header class="site-header" id="top">
-  <div class="wrap header-row">
-    <a class="logo" href="#top" aria-label="La Kokido – home">
-      <img src="assets/img/logo.webp" alt="La Kokido" width="500" height="195">
-    </a>
-    <nav class="nav" id="nav" aria-label="Main">
-      <a href="#locations">Locations</a>
-      <a href="#chicken">Our chicken</a>
-      <a href="#about">About us</a>
-      <a href="#operator">Become an operator</a>
-    </nav>
-    <div class="header-cta">
-      <a class="btn btn-outline" href="#locations">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-        Find La Kokido
+<header class="nav" id="top">
+  <div class="nav__bar">
+    <div class="nav__side">
+      <button class="nav__round nav__burger" id="burger" aria-label="Meny" aria-expanded="false" aria-controls="sheet">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="nav__langs" role="group" aria-label="Språk / Language">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.800 0 18M12 3c-3 3.200-3 14.800 0 18"/></svg>
+        <button type="button" data-lang="no" aria-pressed="true">NO</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <span class="nav__rule"></span>
+      <a class="nav__link" href="#restauranter" data-i18n="nav.restaurants">Restauranter</a>
+      <a class="nav__link" href="#kyllingen" data-i18n="nav.chicken">Kyllingen</a>
+    </div>
+    <a class="nav__logo" href="#top" aria-label="La Kokido"><img src="assets/img/logo.webp" alt="La Kokido" width="500" height="195"></a>
+    <div class="nav__side nav__side--right">
+      <a class="nav__link" href="#om-oss" data-i18n="nav.about">Om oss</a>
+      <a class="nav__link" href="#operator" data-i18n="nav.operator">Bli operatør</a>
+      <a class="pill pill--red nav__find" href="#restauranter">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-7.200 7-12a7 7 0 1 0-14 0c0 4.800 7 12 7 12Z"/><circle cx="12" cy="9" r="2.500"/></svg>
+        <span data-i18n="nav.find">Finn restaurant</span>
       </a>
-      <a class="btn btn-orange hide-sm" href="#operator">Become an operator</a>
-      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <a class="nav__round nav__round--red nav__pin" href="#restauranter" aria-label="Finn restaurant">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-7.200 7-12a7 7 0 1 0-14 0c0 4.800 7 12 7 12Z"/><circle cx="12" cy="9" r="2.500"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="sheet" id="sheet" hidden>
+    <nav class="sheet__nav" aria-label="Meny">
+      <a href="#restauranter" data-i18n="nav.restaurants">Restauranter</a>
+      <a href="#kyllingen" data-i18n="nav.chicken">Kyllingen</a>
+      <a href="#om-oss" data-i18n="nav.about">Om oss</a>
+      <a href="#operator" data-i18n="nav.operator">Bli operatør</a>
+    </nav>
+    <div class="sheet__actions">
+      <div class="lang-toggle">
+        <button type="button" data-lang="no" aria-pressed="true">Norsk</button>
+        <button type="button" data-lang="en" aria-pressed="false">English</button>
+      </div>
+      <a class="pill pill--red" href="#restauranter" data-i18n="nav.find">Finn restaurant</a>
     </div>
   </div>
 </header>
 
 <main id="main">
 
-<!-- HERO -->
 <section class="hero">
-  <div class="wrap hero-inner">
-    <p class="sticker">65+ years of pressure-fried know-how</p>
-    <h1>Crispy.<br>Juicy.<br><span>La Kokido.</span></h1>
-    <p class="hero-lead">Natural chicken, our own breading and marinades, pressure-fried until it's golden outside and tender inside. Classic fried chicken, spicy bone-in and chicken tenders – the kind you come back for.</p>
-    <div class="hero-btns">
-      <a class="btn btn-orange btn-lg" href="#locations">Find your La Kokido</a>
-      <a class="btn btn-white btn-lg" href="#operator">Become an operator</a>
+  <div class="container">
+    <div class="hero__card">
+      <img src="assets/img/hero.webp" alt="" width="1919" height="1080" fetchpriority="high">
+      <h1 class="t-display hero__title"><span data-i18n="hero.l1">Sprø utenpå.</span><br><span data-i18n="hero.l2">Saftig inni.</span></h1>
     </div>
-  </div>
-</section>
-
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>Pressure-fried</span><span>Natural chicken</span><span>Classic</span><span>Spicy bone-in</span><span>Tenders</span><span>No artificial ingredients</span>
-    <span>Pressure-fried</span><span>Natural chicken</span><span>Classic</span><span>Spicy bone-in</span><span>Tenders</span><span>No artificial ingredients</span>
-  </div>
-</div>
-
-<!-- QUICK LINKS -->
-<section class="wrap quick">
-  <a class="tile tile-red" href="#locations">
-    <h2>Find your La Kokido</h2>
-    <p><span data-count="total">13</span> restaurants in Norway and Morocco.</p>
-    <span class="tile-link">See locations →</span>
-  </a>
-  <a class="tile tile-cream" href="#chicken">
-    <h2>Our chicken</h2>
-    <p>Classic, spicy bone-in and tenders.</p>
-    <span class="tile-link">Take a look →</span>
-  </a>
-  <a class="tile tile-orange" href="#operator">
-    <h2>Become an operator</h2>
-    <p>Add La Kokido to your restaurant.</p>
-    <span class="tile-link">How it works →</span>
-  </a>
-</section>
-
-<!-- LOCATIONS -->
-<section class="section" id="locations">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Locations</p>
-      <h2 class="display">Find your La Kokido</h2>
-      <p class="lead">Search by city or restaurant name, then get directions or order straight from the restaurant.</p>
-    </div>
-
-    <div class="finder">
-      <div class="finder-controls">
-        <label class="search">
-          <span class="sr-only">Search locations</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 1 0 4.9 14.3l5.4 5.4 1.4-1.4-5.4-5.4A8 8 0 0 0 10 2Zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12Z"/></svg>
-          <input id="loc-search" type="search" placeholder="City or restaurant, e.g. Bergen" autocomplete="off">
-        </label>
-        <div class="chips" role="group" aria-label="Filter by country" id="loc-filters"></div>
-      </div>
-
-      <div class="finder-body">
-        <div class="loc-list-wrap">
-          <p class="loc-count" id="loc-count" aria-live="polite"></p>
-          <ul class="loc-list" id="loc-list"></ul>
-          <p class="loc-empty" id="loc-empty" hidden>No restaurant matches that search yet. Want La Kokido in your town? <a href="#operator">Become an operator</a>.</p>
-        </div>
-        <div class="map">
-          <iframe title="Map of all La Kokido locations" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/d/u/0/embed?mid=1ovrAAtIn1Pm-Mk8cej24C1JfJVDMtYQ&ehbc=2E312F&noprof=1"></iframe>
-        </div>
+    <div class="hero__foot">
+      <p data-i18n="hero.lead">Naturlig kylling, våre egne marinader og paneringer, trykkfritert til den er gyllen.</p>
+      <div class="hero__btns">
+        <a class="pill pill--red" href="#restauranter" data-i18n="nav.find">Finn restaurant</a>
+        <a class="pill pill--ghost" href="#operator" data-i18n="nav.operator">Bli operatør</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- OUR CHICKEN -->
-<section class="section section-dark" id="chicken">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Our chicken</p>
-      <h2 class="display">Three ways to love it</h2>
+<section class="section section--beige" id="kyllingen">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="t-display t-label" data-i18n="chicken.label">Kyllingen</h2>
+      <a class="pill pill--red" href="#restauranter" data-i18n="chicken.cta">Finn din La Kokido</a>
     </div>
-    <div class="chicken-grid">
-      <img class="chicken-photo" src="assets/img/chicken-meal.webp" alt="La Kokido chicken burger, bucket and fried chicken pieces" width="1069" height="527" loading="lazy">
-      <ol class="menu-cards">
-        <li><span class="num">1</span><div><h3>Classic fried chicken</h3><p>The timeless one. Golden, crunchy coating and juicy meat, pressure-fried the way we've done it for decades.</p></div></li>
-        <li><span class="num">2</span><div><h3>Spicy bone-in chicken</h3><p>Bold flavour with a proper kick, cooked on the bone so it stays tender.</p></div></li>
-        <li><span class="num">3</span><div><h3>Chicken tenders</h3><p>Crispy strips of chicken fillet – made for dipping and sharing.</p></div></li>
-      </ol>
+    <div class="menu">
+      <article class="card card--big">
+        <span class="card__tag" data-i18n="chicken.tag">Til å dele</span>
+        <img src="assets/img/chicken-meal.webp" alt="La Kokido kyllingburger, bøtte og kyllingbiter" width="1069" height="527" loading="lazy">
+        <p class="card__name" data-i18n="chicken.big">Trykkfritert siden dag én</p>
+      </article>
+      <article class="card">
+        <h3 class="t-display" data-i18n="chicken.c1">Klassisk</h3>
+        <p data-i18n="chicken.c1t">Gyllen, sprø panering og saftig kjøtt. Den tidløse.</p>
+      </article>
+      <article class="card">
+        <h3 class="t-display" data-i18n="chicken.c2">Spicy på bein</h3>
+        <p data-i18n="chicken.c2t">Kraftig smak med skikkelig sting, stekt på beinet.</p>
+      </article>
+      <article class="card">
+        <h3 class="t-display">Tenders</h3>
+        <p data-i18n="chicken.c3t">Sprø strimler av kyllingfilet. Laget for dipp og deling.</p>
+      </article>
     </div>
-    <p class="note">Menus and prices vary by restaurant – check with your local La Kokido.</p>
+    <p class="fine" data-i18n="chicken.note">Meny og priser varierer fra restaurant til restaurant.</p>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-  <div class="wrap about">
-    <div class="about-text">
-      <p class="eyebrow">About us</p>
-      <h2 class="display">Fried chicken with nothing to hide</h2>
-      <p>Welcome to La Kokido Fried Chicken, where we have over 65 years of experience in crafting irresistible, pressure-fried chicken. We use only natural chicken, and we keep quality high by using special pressure fryers and our own ingredients.</p>
-      <p>We empower our operators to deliver chicken dishes that keep customers coming back for more – and we work hard to uphold those standards in every bite.</p>
-      <dl class="stats">
-        <div><dt>65+</dt><dd>years of experience</dd></div>
-        <div><dt data-count="total">13</dt><dd>restaurants</dd></div>
-        <div><dt data-count="countries">2</dt><dd>countries</dd></div>
-      </dl>
+<section class="section section--white">
+  <div class="container split">
+    <div>
+      <h2 class="t-display t-label" data-i18n="raw.label">Råvarene</h2>
+      <p class="split__lead" data-i18n="raw.lead">Vi bruker bare naturlig kylling og ingen kunstige tilsetninger. Det smaker du.</p>
     </div>
-    <ul class="values">
-      <li><img src="assets/icons/fresh-chicken.webp" alt="" width="160" height="160" loading="lazy"><h3>Fresh chicken</h3><p>Impeccably fresh, flavourful fried chicken in every restaurant.</p></li>
-      <li><img src="assets/icons/natural-ingredients.webp" alt="" width="160" height="160" loading="lazy"><h3>Natural ingredients</h3><p>Only natural ingredients, so every dish tastes pure and honest.</p></li>
-      <li><img src="assets/icons/quality-assurance.webp" alt="" width="160" height="160" loading="lazy"><h3>Quality assurance</h3><p>No artificial materials – a consistent standard in everything we serve.</p></li>
-      <li><img src="assets/icons/brand-integrity.webp" alt="" width="160" height="160" loading="lazy"><h3>Brand integrity</h3><p>An unwavering commitment to authenticity and quality.</p></li>
-      <li><img src="assets/icons/differentiation.webp" alt="" width="160" height="160" loading="lazy"><h3>Differentiation</h3><p>Transparency and better eating choices set us apart.</p></li>
-      <li><img src="assets/icons/customer-trust.webp" alt="" width="160" height="160" loading="lazy"><h3>Customer trust</h3><p>Guests who value honesty and quality trust what we serve.</p></li>
+    <ul class="facts">
+      <li><strong data-i18n="raw.f1">Fersk kylling</strong><span data-i18n="raw.f1t">Fersk og smakfull i hver restaurant.</span></li>
+      <li><strong data-i18n="raw.f2">Naturlige ingredienser</strong><span data-i18n="raw.f2t">Rene smaker, uten noe kunstig.</span></li>
+      <li><strong data-i18n="raw.f3">Egne krydderblandinger</strong><span data-i18n="raw.f3t">Paneringer, marinader og krydder er våre egne.</span></li>
+      <li><strong data-i18n="raw.f4">Samme kvalitet overalt</strong><span data-i18n="raw.f4t">Spesielle trykkfrityrer gir samme resultat hver gang.</span></li>
     </ul>
   </div>
 </section>
 
-<!-- OPERATOR -->
-<section class="section section-orange" id="operator">
-  <div class="wrap">
-    <div class="op-top">
-      <div>
-        <p class="eyebrow">For restaurants</p>
-        <h2 class="display">Become a La Kokido operator</h2>
-        <p class="lead">Already run a restaurant? Add La Kokido Fried Chicken to your menu. You get a complete, proven business model – and your guests get chicken they'll come back for.</p>
-        <ul class="benefits">
-          <li>Certified training for operators</li>
-          <li>National brand recognition</li>
-          <li>Breadings, marinades &amp; seasonings</li>
-          <li>Quality equipment</li>
-          <li>Branded packaging</li>
-        </ul>
-        <a class="btn btn-dark btn-lg" href="#contact">Contact us to get started</a>
-      </div>
-      <img class="op-photo" src="assets/img/operator.webp" alt="La Kokido team member serving fried chicken" width="1000" height="1500" loading="lazy">
+<section class="section section--black" id="om-oss">
+  <div class="container">
+    <div class="story__head">
+      <h2 class="t-display t-label" data-i18n="about.label">Over 65 år med fritert kylling</h2>
+      <p data-i18n="about.lead">La Kokido Fried Chicken bygger på over 65 års erfaring med uimotståelig, trykkfritert kylling. Vi gir operatørene våre det de trenger for å servere kylling gjestene kommer tilbake for.</p>
     </div>
+    <dl class="story">
+      <div><dt class="t-display">65+</dt><dd data-i18n="about.s1">år med erfaring i trykkfritert kylling.</dd></div>
+      <div><dt class="t-display t-red" data-count="total">13</dt><dd data-i18n="about.s2">restauranter serverer La Kokido i dag.</dd></div>
+      <div><dt class="t-display" data-count="countries">2</dt><dd data-i18n="about.s3">land: Norge og Marokko.</dd></div>
+    </dl>
+  </div>
+</section>
 
-    <h3 class="display display-sm">How we support you</h3>
-    <ol class="support">
-      <li><h4>Operational guidance</h4><p>Help setting up and running an efficient kitchen: best practices, food safety standards and workflow.</p></li>
-      <li><h4>Training programs</h4><p>Staff training in chicken preparation, customer service and procedures, so quality stays consistent.</p></li>
-      <li><h4>Product development</h4><p>We develop the menu together with you and keep it in step with what guests want.</p></li>
-      <li><h4>Technical support</h4><p>Ongoing help with maintenance and troubleshooting for pressure fryers and other equipment.</p></li>
-      <li><h4>Operator community</h4><p>A network of operators who share knowledge and back each other up.</p></li>
+<section class="section section--raised" id="restauranter">
+  <div class="container">
+    <div class="rest__head">
+      <h2 class="t-display rest__title" data-i18n="rest.title">Restauranter</h2>
+      <p data-i18n="rest.lead">Finn din nærmeste La Kokido, få veibeskrivelse eller bestill direkte.</p>
+    </div>
+    <label class="search">
+      <span class="sr-only" data-i18n="rest.search">Søk etter by eller restaurant</span>
+      <input id="loc-search" type="search" placeholder="Søk etter by eller restaurant" data-i18n-ph="rest.search" autocomplete="off">
+      <span class="search__btn" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.500"/><path d="m16 16 4.500 4.500"/></svg></span>
+    </label>
+    <div class="rest__bar">
+      <p id="loc-count" aria-live="polite"></p>
+      <div class="chips" id="loc-filters" role="group" aria-label="Land"></div>
+    </div>
+    <ul class="rest__list" id="loc-list"></ul>
+    <p class="rest__empty" id="loc-empty" hidden><span data-i18n="rest.empty">Ingen restauranter passer til søket ennå. Vil du ha La Kokido i byen din?</span> <a href="#operator" data-i18n="nav.operator">Bli operatør</a></p>
+    <a class="pill pill--dark rest__all" href="https://www.google.com/maps/d/viewer?mid=1ovrAAtIn1Pm-Mk8cej24C1JfJVDMtYQ" target="_blank" rel="noopener" data-i18n="rest.map">Se alle på kartet</a>
+  </div>
+</section>
+
+<section class="jobs" id="operator">
+  <img src="assets/img/operator.webp" alt="" width="1000" height="1500" loading="lazy">
+  <p class="t-display jobs__word" aria-hidden="true"><span data-i18n="op.w1">Bli</span><br><span data-i18n="op.w2">operatør</span></p>
+  <div class="container jobs__body">
+    <h2 class="sr-only" data-i18n="nav.operator">Bli operatør</h2>
+    <p data-i18n="op.lead">Driver du restaurant? Ta La Kokido Fried Chicken inn på menyen. Du får et komplett, utprøvd konsept.</p>
+    <a class="pill pill--red" href="#kontakt"><span data-i18n="op.cta">Kontakt oss</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+  </div>
+</section>
+
+<section class="section section--beige">
+  <div class="container">
+    <h2 class="t-display list__title" data-i18n="get.title">Dette får du</h2>
+    <ol class="list">
+      <li><p class="list__meta" data-i18n="get.m1">Opplæring</p><h3 data-i18n="get.h1">Sertifisert opplæring</h3><p data-i18n="get.t1">Vi lærer opp deg og de ansatte i tilberedning, service og rutiner, så kvaliteten er lik hver dag.</p></li>
+      <li><p class="list__meta" data-i18n="get.m2">Varer</p><h3 data-i18n="get.h2">Paneringer, marinader og krydder</h3><p data-i18n="get.t2">Våre egne blandinger, levert til restauranten din.</p></li>
+      <li><p class="list__meta" data-i18n="get.m3">Utstyr</p><h3 data-i18n="get.h3">Kvalitetsutstyr og teknisk hjelp</h3><p data-i18n="get.t3">Trykkfrityrer og annet utstyr, med løpende hjelp til vedlikehold og feilsøking.</p></li>
+      <li><p class="list__meta" data-i18n="get.m4">Merkevare</p><h3 data-i18n="get.h4">Kjent navn og egen emballasje</h3><p data-i18n="get.t4">Et merke gjestene kjenner igjen, med ferdig profilert emballasje.</p></li>
+      <li><p class="list__meta" data-i18n="get.m5">Drift</p><h3 data-i18n="get.h5">Veiledning og menyutvikling</h3><p data-i18n="get.t5">Hjelp med kjøkkenflyt og mattrygghet, og en meny vi utvikler sammen med deg.</p></li>
+      <li><p class="list__meta" data-i18n="get.m6">Nettverk</p><h3 data-i18n="get.h6">Et fellesskap av operatører</h3><p data-i18n="get.t6">Operatører som deler erfaringer og hjelper hverandre.</p></li>
     </ol>
+  </div>
+</section>
 
-    <div class="contact" id="contact">
-      <div class="contact-info">
-        <h3 class="display display-sm">Interested? Send us an email.</h3>
-        <p>Tell us a little about your restaurant and we'll get back to you about becoming a La Kokido operator.</p>
-        <a class="mail-link" data-email-link href="#contact"><span data-email-text></span></a>
-        <p class="small">Fill in the form and your email app opens with the message ready to send – or just write to us directly at the address above.</p>
-      </div>
-      <form class="contact-form" id="operator-form" novalidate>
-        <div class="row">
-          <label>Your name<input name="name" required autocomplete="name"></label>
-          <label>Restaurant / company<input name="restaurant" required autocomplete="organization"></label>
+<section class="prefooter" id="kontakt">
+  <div class="container prefooter__grid">
+    <div class="prefooter__body">
+      <h2 class="t-display prefooter__title" data-i18n="c.title">Vil du servere La Kokido?</h2>
+      <p class="prefooter__lead" data-i18n="c.lead">Send oss en e-post og fortell litt om restauranten din.</p>
+      <p class="prefooter__mail"><a data-email-link href="#kontakt"><span data-email-text></span></a>
+        <button type="button" class="copy" id="copy-email" data-i18n="c.copy">Kopier</button></p>
+      <form class="signup" id="operator-form" novalidate>
+        <div class="signup__row">
+          <label class="sr-only" for="f-name" data-i18n="c.name">Navn</label>
+          <input id="f-name" name="name" placeholder="Navn" data-i18n-ph="c.name" autocomplete="name" required>
+          <label class="sr-only" for="f-rest" data-i18n="c.rest">Restaurant</label>
+          <input id="f-rest" name="restaurant" placeholder="Restaurant" data-i18n-ph="c.rest" autocomplete="organization" required>
         </div>
-        <div class="row">
-          <label>City &amp; country<input name="city" required autocomplete="address-level2"></label>
-          <label>Phone <span class="opt">(optional)</span><input name="phone" type="tel" autocomplete="tel"></label>
+        <div class="signup__row">
+          <label class="sr-only" for="f-city" data-i18n="c.city">By og land</label>
+          <input id="f-city" name="city" placeholder="By og land" data-i18n-ph="c.city" autocomplete="address-level2" required>
+          <label class="sr-only" for="f-phone" data-i18n="c.phone">Telefon (valgfritt)</label>
+          <input id="f-phone" name="phone" type="tel" placeholder="Telefon (valgfritt)" data-i18n-ph="c.phone" autocomplete="tel">
         </div>
-        <label>Message<textarea name="message" rows="4" placeholder="Tell us about your restaurant and why you'd like to serve La Kokido."></textarea></label>
-        <p class="form-error" id="form-error" role="alert" hidden>Please fill in your name, restaurant and city.</p>
-        <button class="btn btn-red btn-lg" type="submit">Send email</button>
-        <p class="form-done" id="form-done" role="status" hidden>Your email app should now be open with the message ready. If nothing happened, write to us at <a data-email-link href="#contact"><span data-email-text></span></a>.</p>
+        <label class="sr-only" for="f-msg" data-i18n="c.msg">Melding (valgfritt)</label>
+        <textarea id="f-msg" name="message" rows="3" placeholder="Melding (valgfritt)" data-i18n-ph="c.msg"></textarea>
+        <p class="signup__error" id="form-error" role="alert" hidden data-i18n="c.error">Fyll inn navn, restaurant og by.</p>
+        <button class="pill pill--black" type="submit" data-i18n="c.send">Skriv e-post</button>
+        <p class="signup__note" id="form-done" role="status" hidden data-i18n="c.done">E-postprogrammet ditt skal nå ha åpnet seg med meldingen klar. Skjedde det ingenting? Skriv til adressen over.</p>
+        <p class="signup__note" data-i18n="c.note">Skjemaet åpner e-postprogrammet ditt med meldingen ferdig utfylt. Ingenting lagres på denne siden.</p>
       </form>
     </div>
+  </div>
+  <div class="prefooter__lines t-display" aria-hidden="true">
+    <span data-i18n="c.line">Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør</span>
+    <span data-i18n="c.line">Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør</span>
+    <span data-i18n="c.line">Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør</span>
   </div>
 </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-row">
-    <img src="assets/img/logo.webp" alt="La Kokido" width="500" height="195" loading="lazy">
-    <nav aria-label="Footer">
-      <a href="#locations">Locations</a>
-      <a href="#chicken">Our chicken</a>
-      <a href="#about">About us</a>
-      <a href="#operator">Become an operator</a>
-      <a data-email-link href="#contact">Contact</a>
-    </nav>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/img/logo.webp" alt="La Kokido" width="500" height="195" loading="lazy">
+        <div class="lang-toggle">
+          <button type="button" data-lang="no" aria-pressed="true">Norsk</button>
+          <button type="button" data-lang="en" aria-pressed="false">English</button>
+        </div>
+      </div>
+      <ul class="footer__col">
+        <li><a href="#restauranter" data-i18n="nav.restaurants">Restauranter</a></li>
+        <li><a href="#kyllingen" data-i18n="nav.chicken">Kyllingen</a></li>
+        <li><a href="#om-oss" data-i18n="nav.about">Om oss</a></li>
+      </ul>
+      <ul class="footer__col">
+        <li><a href="#operator" data-i18n="nav.operator">Bli operatør</a></li>
+        <li><a href="#kontakt" data-i18n="f.contact">Kontakt</a></li>
+      </ul>
+      <address>
+        <strong>La Kokido Fried Chicken</strong>
+        <a data-email-link href="#kontakt"><span data-email-text></span></a>
+      </address>
+    </div>
+    <p class="t-display footer__word" aria-hidden="true"><span data-i18n="f.w1">Kylling som</span><br><span data-i18n="f.w2">frister.</span></p>
+    <p class="footer__legal">© <span id="year">2026</span> La Kokido Fried Chicken</p>
   </div>
-  <p class="wrap copyright">© <span id="year">2026</span> La Kokido Fried Chicken. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>

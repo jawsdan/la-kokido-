@@ -1,12 +1,13 @@
 # La Kokido
 
-Website for La Kokido Fried Chicken: location finder and operator (franchise) contact.
+Nettside for La Kokido Fried Chicken: restaurantsøk og kontakt for nye operatører. Norsk med engelsk språkvalg.
 
-Plain HTML, CSS and JavaScript – no build step. Open `index.html`, or serve the folder with any static host.
+Ren HTML, CSS og JavaScript uten byggesteg. Åpne `index.html`, eller legg mappen på en hvilken som helst statisk webserver.
 
-## Editing
+## Endre innhold
 
-Everything you are likely to change is at the top of `script.js`:
+Det du oftest vil endre står øverst i `script.js`:
 
-- `CONTACT_EMAIL` – the address operator enquiries are sent to.
-- `LOCATIONS` – one line per restaurant (name, address, country, map link, optional order link).
+- `CONTACT_EMAIL` – adressen operatør-henvendelser sendes til.
+- `LOCATIONS` – én linje per restaurant (navn, adresse, land, kartlenke, valgfri bestillingslenke).
+- `EN` – de engelske tekstene. De norske står i `index.html`.
