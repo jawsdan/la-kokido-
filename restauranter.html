@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restauranter | La Kokido</title>
+<meta name="description" content="Finn din nærmeste La Kokido-restaurant i Norge og Marokko.">
+<meta property="og:title" content="Restauranter | La Kokido">
+<meta property="og:description" content="Finn din nærmeste La Kokido-restaurant i Norge og Marokko.">
+<meta property="og:image" content="assets/img/hero.webp">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/bowlby-one.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-title-en="Restaurants | La Kokido">
+<a class="skip" href="#main" data-i18n="skip">Hopp til innhold</a>
+<header class="nav" id="nav"></header>
+
+<main id="main">
+<section class="section section--raised page">
+  <div class="container">
+    <div class="rest__head">
+      <h1 class="t-display rest__title" data-i18n="rest.title">Restauranter</h1>
+      <p data-i18n="rest.lead">Finn din nærmeste La Kokido, få veibeskrivelse eller bestill direkte.</p>
+    </div>
+    <label class="search">
+      <span class="sr-only" data-i18n="rest.search">Søk etter by eller restaurant</span>
+      <input id="loc-search" type="search" placeholder="Søk etter by eller restaurant" data-i18n-ph="rest.search" autocomplete="off">
+      <span class="search__btn" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.500"/><path d="m16 16 4.500 4.500"/></svg></span>
+    </label>
+    <div class="rest__bar">
+      <p id="loc-count" aria-live="polite"></p>
+      <div class="chips" id="loc-filters" role="group" aria-label="Land"></div>
+    </div>
+    <ul class="rest__list" id="loc-list"></ul>
+    <p class="rest__empty" id="loc-empty" hidden><span data-i18n="rest.empty">Ingen restauranter passer til søket ennå. Vil du ha La Kokido i byen din?</span> <a href="operator.html" data-i18n="nav.operator">Bli operatør</a></p>
+    <a class="pill pill--dark rest__all" href="https://www.google.com/maps/d/viewer?mid=1ovrAAtIn1Pm-Mk8cej24C1JfJVDMtYQ" target="_blank" rel="noopener" data-i18n="rest.map">Se alle på kartet</a>
+  </div>
+</section>
+</main>
+
+<div id="tail"></div>
+<script src="site.js"></script>
+</body>
+</html>

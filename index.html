@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>La Kokido Fried Chicken | Finn restaurant eller bli operatør</title>
-<meta name="description" content="La Kokido Fried Chicken – naturlig, trykkfritert kylling. Finn din nærmeste La Kokido, eller ta La Kokido inn i restauranten din og bli operatør.">
+<title>La Kokido Fried Chicken</title>
+<meta name="description" content="La Kokido Fried Chicken – naturlig, trykkfritert kylling. Se menyen, finn din nærmeste restaurant, eller bli operatør.">
 <meta property="og:title" content="La Kokido Fried Chicken">
-<meta property="og:description" content="Naturlig, trykkfritert kylling. Finn restaurant eller bli operatør.">
+<meta property="og:description" content="La Kokido Fried Chicken – naturlig, trykkfritert kylling. Se menyen, finn din nærmeste restaurant, eller bli operatør.">
 <meta property="og:image" content="assets/img/hero.webp">
 <meta name="theme-color" content="#111111">
 <link rel="icon" href="favicon.png" type="image/png">
@@ -14,106 +14,46 @@
 <link rel="preload" href="assets/fonts/bowlby-one.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-title-en="La Kokido Fried Chicken">
 <a class="skip" href="#main" data-i18n="skip">Hopp til innhold</a>
-
-<header class="nav" id="top">
-  <div class="nav__bar">
-    <div class="nav__side">
-      <button class="nav__round nav__burger" id="burger" aria-label="Meny" aria-expanded="false" aria-controls="sheet">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-      <div class="nav__langs" role="group" aria-label="Språk / Language">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.800 0 18M12 3c-3 3.200-3 14.800 0 18"/></svg>
-        <button type="button" data-lang="no" aria-pressed="true">NO</button>
-        <button type="button" data-lang="en" aria-pressed="false">EN</button>
-      </div>
-      <span class="nav__rule"></span>
-      <a class="nav__link" href="#restauranter" data-i18n="nav.restaurants">Restauranter</a>
-      <a class="nav__link" href="#kyllingen" data-i18n="nav.chicken">Kyllingen</a>
-    </div>
-    <a class="nav__logo" href="#top" aria-label="La Kokido"><img src="assets/img/logo.webp" alt="La Kokido" width="500" height="195"></a>
-    <div class="nav__side nav__side--right">
-      <a class="nav__link" href="#om-oss" data-i18n="nav.about">Om oss</a>
-      <a class="nav__link" href="#operator" data-i18n="nav.operator">Bli operatør</a>
-      <a class="pill pill--red nav__find" href="#restauranter">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-7.200 7-12a7 7 0 1 0-14 0c0 4.800 7 12 7 12Z"/><circle cx="12" cy="9" r="2.500"/></svg>
-        <span data-i18n="nav.find">Finn restaurant</span>
-      </a>
-      <a class="nav__round nav__round--red nav__pin" href="#restauranter" aria-label="Finn restaurant">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-7.200 7-12a7 7 0 1 0-14 0c0 4.800 7 12 7 12Z"/><circle cx="12" cy="9" r="2.500"/></svg>
-      </a>
-    </div>
-  </div>
-  <div class="sheet" id="sheet" hidden>
-    <nav class="sheet__nav" aria-label="Meny">
-      <a href="#restauranter" data-i18n="nav.restaurants">Restauranter</a>
-      <a href="#kyllingen" data-i18n="nav.chicken">Kyllingen</a>
-      <a href="#om-oss" data-i18n="nav.about">Om oss</a>
-      <a href="#operator" data-i18n="nav.operator">Bli operatør</a>
-    </nav>
-    <div class="sheet__actions">
-      <div class="lang-toggle">
-        <button type="button" data-lang="no" aria-pressed="true">Norsk</button>
-        <button type="button" data-lang="en" aria-pressed="false">English</button>
-      </div>
-      <a class="pill pill--red" href="#restauranter" data-i18n="nav.find">Finn restaurant</a>
-    </div>
-  </div>
-</header>
+<header class="nav" id="nav"></header>
 
 <main id="main">
-
 <section class="hero">
   <div class="container">
-    <div class="hero__card">
+    <a class="hero__card" href="meny.html">
       <img src="assets/img/hero.webp" alt="" width="1919" height="1080" fetchpriority="high">
       <h1 class="t-display hero__title"><span data-i18n="hero.l1">Sprø utenpå.</span><br><span data-i18n="hero.l2">Saftig inni.</span></h1>
-    </div>
-    <div class="hero__foot">
-      <p data-i18n="hero.lead">Naturlig kylling, våre egne marinader og paneringer, trykkfritert til den er gyllen.</p>
-      <div class="hero__btns">
-        <a class="pill pill--red" href="#restauranter" data-i18n="nav.find">Finn restaurant</a>
-        <a class="pill pill--ghost" href="#operator" data-i18n="nav.operator">Bli operatør</a>
-      </div>
-    </div>
+    </a>
   </div>
 </section>
 
-<section class="section section--beige" id="kyllingen">
+<section class="section section--beige">
   <div class="container">
     <div class="section__head">
-      <h2 class="t-display t-label" data-i18n="chicken.label">Kyllingen</h2>
-      <a class="pill pill--red" href="#restauranter" data-i18n="chicken.cta">Finn din La Kokido</a>
+      <h2 class="t-display t-label" data-i18n="home.menu">Menyen</h2>
+      <a class="pill pill--red" href="meny.html" data-i18n="home.menu.cta">Se hele menyen</a>
     </div>
     <div class="menu">
-      <article class="card card--big">
-        <span class="card__tag" data-i18n="chicken.tag">Til å dele</span>
+      <a class="card card--big" href="meny.html#dele">
+        <span class="card__tag" data-i18n="home.tag">Til å dele</span>
         <img src="assets/img/chicken-meal.webp" alt="La Kokido kyllingburger, bøtte og kyllingbiter" width="1069" height="527" loading="lazy">
-        <p class="card__name" data-i18n="chicken.big">Trykkfritert siden dag én</p>
-      </article>
-      <article class="card">
-        <h3 class="t-display" data-i18n="chicken.c1">Klassisk</h3>
-        <p data-i18n="chicken.c1t">Gyllen, sprø panering og saftig kjøtt. Den tidløse.</p>
-      </article>
-      <article class="card">
-        <h3 class="t-display" data-i18n="chicken.c2">Spicy på bein</h3>
-        <p data-i18n="chicken.c2t">Kraftig smak med skikkelig sting, stekt på beinet.</p>
-      </article>
-      <article class="card">
-        <h3 class="t-display">Tenders</h3>
-        <p data-i18n="chicken.c3t">Sprø strimler av kyllingfilet. Laget for dipp og deling.</p>
-      </article>
+        <span class="card__name" data-i18n="home.big">Bøtte, burger og kylling</span>
+      </a>
+      <a class="card card--photo" href="meny.html#sandwich"><img src="assets/menu/classic-bro.webp" alt="" width="960" height="540" loading="lazy"><span class="card__name">Classic Bro</span></a>
+      <a class="card card--photo" href="meny.html#kylling"><img src="assets/menu/crispy-tenders.webp" alt="" width="960" height="540" loading="lazy"><span class="card__name">Crispy Tenders</span></a>
+      <a class="card card--photo" href="meny.html#kylling"><img src="assets/menu/wings.webp" alt="" width="960" height="540" loading="lazy"><span class="card__name">Wings</span></a>
+      <a class="card card--photo" href="meny.html#meals"><img src="assets/menu/big-bro.webp" alt="" width="960" height="540" loading="lazy"><span class="card__name">Big Bro</span></a>
     </div>
-    <p class="fine" data-i18n="chicken.note">Meny og priser varierer fra restaurant til restaurant.</p>
   </div>
 </section>
 
 <section class="section section--white">
   <div class="container split">
     <div>
-      <h2 class="t-display t-label" data-i18n="raw.label">Råvarene</h2>
-      <p class="split__lead" data-i18n="raw.lead">Vi bruker bare naturlig kylling og ingen kunstige tilsetninger. Det smaker du.</p>
+      <h2 class="t-display t-label" data-i18n="home.raw">Råvarene</h2>
+      <p class="split__lead" data-i18n="home.raw.lead">Vi bruker bare naturlig kylling og ingen kunstige tilsetninger. Det smaker du.</p>
+      <a class="pill pill--red" href="ravarer.html" data-i18n="home.raw.cta">Les om råvarene</a>
     </div>
     <ul class="facts">
       <li><strong data-i18n="raw.f1">Fersk kylling</strong><span data-i18n="raw.f1t">Fersk og smakfull i hver restaurant.</span></li>
@@ -124,7 +64,7 @@
   </div>
 </section>
 
-<section class="section section--black" id="om-oss">
+<section class="section section--black">
   <div class="container">
     <div class="story__head">
       <h2 class="t-display t-label" data-i18n="about.label">Over 65 år med fritert kylling</h2>
@@ -138,118 +78,18 @@
   </div>
 </section>
 
-<section class="section section--raised" id="restauranter">
-  <div class="container">
-    <div class="rest__head">
-      <h2 class="t-display rest__title" data-i18n="rest.title">Restauranter</h2>
-      <p data-i18n="rest.lead">Finn din nærmeste La Kokido, få veibeskrivelse eller bestill direkte.</p>
-    </div>
-    <label class="search">
-      <span class="sr-only" data-i18n="rest.search">Søk etter by eller restaurant</span>
-      <input id="loc-search" type="search" placeholder="Søk etter by eller restaurant" data-i18n-ph="rest.search" autocomplete="off">
-      <span class="search__btn" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.500"/><path d="m16 16 4.500 4.500"/></svg></span>
-    </label>
-    <div class="rest__bar">
-      <p id="loc-count" aria-live="polite"></p>
-      <div class="chips" id="loc-filters" role="group" aria-label="Land"></div>
-    </div>
-    <ul class="rest__list" id="loc-list"></ul>
-    <p class="rest__empty" id="loc-empty" hidden><span data-i18n="rest.empty">Ingen restauranter passer til søket ennå. Vil du ha La Kokido i byen din?</span> <a href="#operator" data-i18n="nav.operator">Bli operatør</a></p>
-    <a class="pill pill--dark rest__all" href="https://www.google.com/maps/d/viewer?mid=1ovrAAtIn1Pm-Mk8cej24C1JfJVDMtYQ" target="_blank" rel="noopener" data-i18n="rest.map">Se alle på kartet</a>
-  </div>
-</section>
-
-<section class="jobs" id="operator">
+<section class="jobs">
   <img src="assets/img/operator.webp" alt="" width="1000" height="1500" loading="lazy">
   <p class="t-display jobs__word" aria-hidden="true"><span data-i18n="op.w1">Bli</span><br><span data-i18n="op.w2">operatør</span></p>
   <div class="container jobs__body">
     <h2 class="sr-only" data-i18n="nav.operator">Bli operatør</h2>
     <p data-i18n="op.lead">Driver du restaurant? Ta La Kokido Fried Chicken inn på menyen. Du får et komplett, utprøvd konsept.</p>
-    <a class="pill pill--red" href="#kontakt"><span data-i18n="op.cta">Kontakt oss</span> <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+    <a class="pill pill--red" href="operator.html" data-i18n="op.more">Slik fungerer det</a>
   </div>
 </section>
-
-<section class="section section--beige">
-  <div class="container">
-    <h2 class="t-display list__title" data-i18n="get.title">Dette får du</h2>
-    <ol class="list">
-      <li><p class="list__meta" data-i18n="get.m1">Opplæring</p><h3 data-i18n="get.h1">Sertifisert opplæring</h3><p data-i18n="get.t1">Vi lærer opp deg og de ansatte i tilberedning, service og rutiner, så kvaliteten er lik hver dag.</p></li>
-      <li><p class="list__meta" data-i18n="get.m2">Varer</p><h3 data-i18n="get.h2">Paneringer, marinader og krydder</h3><p data-i18n="get.t2">Våre egne blandinger, levert til restauranten din.</p></li>
-      <li><p class="list__meta" data-i18n="get.m3">Utstyr</p><h3 data-i18n="get.h3">Kvalitetsutstyr og teknisk hjelp</h3><p data-i18n="get.t3">Trykkfrityrer og annet utstyr, med løpende hjelp til vedlikehold og feilsøking.</p></li>
-      <li><p class="list__meta" data-i18n="get.m4">Merkevare</p><h3 data-i18n="get.h4">Kjent navn og egen emballasje</h3><p data-i18n="get.t4">Et merke gjestene kjenner igjen, med ferdig profilert emballasje.</p></li>
-      <li><p class="list__meta" data-i18n="get.m5">Drift</p><h3 data-i18n="get.h5">Veiledning og menyutvikling</h3><p data-i18n="get.t5">Hjelp med kjøkkenflyt og mattrygghet, og en meny vi utvikler sammen med deg.</p></li>
-      <li><p class="list__meta" data-i18n="get.m6">Nettverk</p><h3 data-i18n="get.h6">Et fellesskap av operatører</h3><p data-i18n="get.t6">Operatører som deler erfaringer og hjelper hverandre.</p></li>
-    </ol>
-  </div>
-</section>
-
-<section class="prefooter" id="kontakt">
-  <div class="container prefooter__grid">
-    <div class="prefooter__body">
-      <h2 class="t-display prefooter__title" data-i18n="c.title">Vil du servere La Kokido?</h2>
-      <p class="prefooter__lead" data-i18n="c.lead">Send oss en e-post og fortell litt om restauranten din.</p>
-      <p class="prefooter__mail"><a data-email-link href="#kontakt"><span data-email-text></span></a>
-        <button type="button" class="copy" id="copy-email" data-i18n="c.copy">Kopier</button></p>
-      <form class="signup" id="operator-form" novalidate>
-        <div class="signup__row">
-          <label class="sr-only" for="f-name" data-i18n="c.name">Navn</label>
-          <input id="f-name" name="name" placeholder="Navn" data-i18n-ph="c.name" autocomplete="name" required>
-          <label class="sr-only" for="f-rest" data-i18n="c.rest">Restaurant</label>
-          <input id="f-rest" name="restaurant" placeholder="Restaurant" data-i18n-ph="c.rest" autocomplete="organization" required>
-        </div>
-        <div class="signup__row">
-          <label class="sr-only" for="f-city" data-i18n="c.city">By og land</label>
-          <input id="f-city" name="city" placeholder="By og land" data-i18n-ph="c.city" autocomplete="address-level2" required>
-          <label class="sr-only" for="f-phone" data-i18n="c.phone">Telefon (valgfritt)</label>
-          <input id="f-phone" name="phone" type="tel" placeholder="Telefon (valgfritt)" data-i18n-ph="c.phone" autocomplete="tel">
-        </div>
-        <label class="sr-only" for="f-msg" data-i18n="c.msg">Melding (valgfritt)</label>
-        <textarea id="f-msg" name="message" rows="3" placeholder="Melding (valgfritt)" data-i18n-ph="c.msg"></textarea>
-        <p class="signup__error" id="form-error" role="alert" hidden data-i18n="c.error">Fyll inn navn, restaurant og by.</p>
-        <button class="pill pill--black" type="submit" data-i18n="c.send">Skriv e-post</button>
-        <p class="signup__note" id="form-done" role="status" hidden data-i18n="c.done">E-postprogrammet ditt skal nå ha åpnet seg med meldingen klar. Skjedde det ingenting? Skriv til adressen over.</p>
-        <p class="signup__note" data-i18n="c.note">Skjemaet åpner e-postprogrammet ditt med meldingen ferdig utfylt. Ingenting lagres på denne siden.</p>
-      </form>
-    </div>
-  </div>
-  <div class="prefooter__lines t-display" aria-hidden="true">
-    <span data-i18n="c.line">Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør</span>
-    <span data-i18n="c.line">Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør</span>
-    <span data-i18n="c.line">Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør Bli operatør</span>
-  </div>
-</section>
-
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <img src="assets/img/logo.webp" alt="La Kokido" width="500" height="195" loading="lazy">
-        <div class="lang-toggle">
-          <button type="button" data-lang="no" aria-pressed="true">Norsk</button>
-          <button type="button" data-lang="en" aria-pressed="false">English</button>
-        </div>
-      </div>
-      <ul class="footer__col">
-        <li><a href="#restauranter" data-i18n="nav.restaurants">Restauranter</a></li>
-        <li><a href="#kyllingen" data-i18n="nav.chicken">Kyllingen</a></li>
-        <li><a href="#om-oss" data-i18n="nav.about">Om oss</a></li>
-      </ul>
-      <ul class="footer__col">
-        <li><a href="#operator" data-i18n="nav.operator">Bli operatør</a></li>
-        <li><a href="#kontakt" data-i18n="f.contact">Kontakt</a></li>
-      </ul>
-      <address>
-        <strong>La Kokido Fried Chicken</strong>
-        <a data-email-link href="#kontakt"><span data-email-text></span></a>
-      </address>
-    </div>
-    <p class="t-display footer__word" aria-hidden="true"><span data-i18n="f.w1">Kylling som</span><br><span data-i18n="f.w2">frister.</span></p>
-    <p class="footer__legal">© <span id="year">2026</span> La Kokido Fried Chicken</p>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+<div id="tail"></div>
+<script src="site.js"></script>
 </body>
 </html>
